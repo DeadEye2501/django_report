@@ -23,8 +23,8 @@
 - админка доступна по адресу http://localhost:8000/admin/ для логина под суперюзером можно использовать `root` - `Somepass_123`
 - получить список всех расчётов можно по адресу `GET` http://localhost:8000/oil_report/api/report/
 - получить информацию по конкретному расчёту можно по адресу `GET` http://localhost:8000/oil_report/api/report/{report_id}/
-также можно расширить получаемые данные при помощи аргумента `filter`, передаваемого в header'е запроса, таким образом
-можно получить `name` и `calc_time`. пример использования `filter`: http://localhost:8000/oil_report/api/report/{report_id}?filter={name,calc_time}
+также можно расширить получаемые данные при помощи аргумента `fields`, передаваемого в header'е запроса, таким образом
+можно получить `name` и `calc_time`. пример использования `fields`: http://localhost:8000/oil_report/api/report/{report_id}?fields={name,calc_time}
 - запросить новый расчёт можно по адресу `POST` http://localhost:8000/oil_report/api/report/ передав в теле запроса следующие параметры:
 `date_start`, `date_fin`, `lag`
 
