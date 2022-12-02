@@ -1,0 +1,5 @@
+/django_report/static/
+Pipfile
+Pipfile.lock
+.idea
+*.rdb
