@@ -14,10 +14,6 @@ class CreateDataFrameSerializer(serializers.ModelSerializer):
         model = DataFrame
         fields = ('report', 'date', 'liquid', 'oil', 'water', 'wct')
 
-    @classmethod
-    def echo(cls):
-        print('echo')
-
 
 class GetReportSerializer(serializers.ModelSerializer):
     OPTIONAL_FIELDS = ('name', 'calc_time')
