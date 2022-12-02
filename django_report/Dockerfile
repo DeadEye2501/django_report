@@ -21,6 +21,3 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # copy project
 COPY django_report .
-
-# run entrypoint.sh
-ENTRYPOINT ["/django_report/entrypoint.sh"]
