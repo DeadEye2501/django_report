@@ -3,7 +3,11 @@ version: '3.8'
 services:
   web:
     build: ./django_report
-    command: python manage.py runserver 0.0.0.0:8000
+    command: >
+      sh -c "python manage.py flush --no-input
+             python manage.py migrate
+             python manage.py collectstatic --no-input
+             python manage.py runserver 0.0.0.0:8000"
     volumes:
       - ./django_report/:/django_report/
     ports:
